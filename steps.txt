@@ -1,0 +1,60 @@
+You need node js and npm
+
+Boundles?
+
+Use:
+- Entries
+- Outputs
+- Plugins
+- Loaders
+
+Install webpack client global
++ npm i webpack webpack-cli -g
+
+Create a new package.js
++ npm init
+
+Important!
+Install webpack as a dependence, this due (this because) to group work
++ npm i webpack webpack-cli -D
+
+executes a mode of code compiled or no
++ npm run build
+
+Babel dependences // According to EDteam
++ npm i babel-loader -D
++ npm i babel-core -D
++ npm i babel-preset-env -D
+
+FIX ASYNC AWAIT
++ npm i regenerator-runtime -D
+
+According to Babel official page
++ npm i babel-loader @babel/core @babel/register -D
++ npm i @babel/preset-env -D
++ npm i @babel/polyfill -D // Possibly this not
++ npm i core-js@3 -D // config .babelrc
+ 
+HTML Webpack plugin
++ npm i html-webpack-plugin -D
++ npm i html-loader -D ??
+
+executes a live server
++ npm i webpack-dev-server -D
+
+PATHS
++ npm i resolve-url-loader
+
+SASS
++ npm i file-loader
++ npm i autoprefixer -D
++ npm i style-loader -D
++ npm i css-loader -D
++ npm i node-sass -D
++ npm i sass-loader -D
++ npm i postcss-loader -D
++ npm i mini-css-extract-plugin -D
+
+
+ACCORDING BY FAZT
++ npm image-webpack-loader -D

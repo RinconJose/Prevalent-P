@@ -1,0 +1,44 @@
+/* MODAL */
+
+.modal {
+	@include flex;
+	width: 100vw;
+	height: 100vh;
+	background: $bgModal;
+	position: fixed;
+	top: 0;
+	left: 0;
+	@include transition;
+	z-index: 3000;
+	&__container {
+		@include flex;
+		width: 100%;
+		max-width: $maxWModal;
+		height: auto;
+		min-height: $minHModal;
+		max-height: $maxHModal;
+		padding: 10px;
+		padding-top: 40px;
+		font-size: toRem(15);
+		text-align: center;
+		background: $white;
+		position: relative;
+	}
+	&__content {
+		height: 400px;
+		overflow-y: auto;
+	}
+	&__title {
+		width: 100%;
+	}
+	&__close {
+		@include flex;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		background: purple;
+		cursor: pointer;
+	}
+}

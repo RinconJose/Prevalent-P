@@ -1,0 +1,17 @@
+/** CONTAINER **/
+
+// CONTAINER
+.#{$brand} {
+    &__container {
+        width: 100%;
+        &--general {
+        }
+        &--limit {
+            @extend %widthLimit;
+        }
+        &--search {
+            max-width: 49%;
+            @include flex(flex-start);
+        }
+    }
+}

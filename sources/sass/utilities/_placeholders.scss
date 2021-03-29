@@ -1,0 +1,63 @@
+/* PLACEHOLDERS */
+
+
+// WIDTH
+%width100 {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+%paddingLimit {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+%widthLimit {
+    @extend %width100;
+    max-width: $widthLimit;
+    @extend %paddingLimit;
+}
+
+
+// PSEUDO ELEMENTS
+%pseudoE {
+    @include flex;
+    @extend %width100;
+    content: '';
+}
+
+
+// TEXT
+%sTitle {
+    font-size: toRem(24);
+    @include mq(mob){
+        font-size: toRem(22);
+    }
+}
+
+%text {
+    font-size: toRem(16);
+    @include mq(mob){
+        font-size: toRem(15);
+    }
+}
+
+// HIDE INPUTS TYPE CHECKBOX AND RADIO
+%hideCheckbox {
+	display: block;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    position: absolute;
+}
+
+
+// CENTER POSITION
+%centerPos {
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}

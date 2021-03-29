@@ -1,0 +1,123 @@
+/* FORMS */
+.form {
+	&__box {
+		width: 100%;
+		padding: 10px 10px 20px;
+		margin-bottom: 10px;
+		background: lightgreen;
+		&--placeholder {
+			position: relative;
+			.form__label {
+				position: absolute;
+				top: 42px;
+				left: 20px;
+				pointer-events: none;
+			}
+			.form__input {
+				margin-top: 20px;
+				&:focus {
+					& ~ .form__label {
+						top: 10px;
+						left: 10px;
+						pointer-events: all;
+					}
+				}
+			}
+			&.pause {
+				.form__label {
+					top: 10px;
+					left: 10px;
+					pointer-events: all;
+				}
+			}
+		}
+	}
+	&__label {
+		@include transition;
+		&--checkbox {
+			@include flex(flex-start);
+			width: 100%;
+			padding-left: 20px;
+			position: relative;
+			&::before {
+				@include flex;
+				// content: "✓";
+				content: "✔";
+				width: 15px;
+				height: 15px;
+				border: 1px solid rgba($black,.2);
+				border-radius: 2px;
+				background: $white;
+				font-size: toRem(12);
+				color: transparent;
+				line-height: 1;
+				position: absolute;
+				top: 1px;
+				left: 0;
+				@include transition;
+			}
+		}
+		&--radio {
+			@include flex(flex-start);
+			width: 100%;
+			padding-left: 20px;
+			position: relative;
+			&::before {
+				@include flex;
+				content: "";
+				width: 15px;
+				height: 15px;
+				border: 1px solid rgba($black,.2);
+				border-radius: 50%;
+				background: $white;
+				position: absolute;
+				top: 1px;
+				left: 0;
+				@include transition;
+			}
+			&::after {
+				@include flex;
+				content: "";
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				background: $white;
+				position: absolute;
+				top: 5px;
+				left: 4px;
+				transform: scale(0);
+				@include transition;
+			}
+		}
+	}
+	&__input {
+		width: 100%;
+		padding: 10px;
+		border: 1px solid rgba($black,.5);
+		font-family: $fontFamily;
+		font-size: toRem(16);
+		color: $black;
+		@include transition;
+		@include placeholder {
+			font-family: $fontFamily;
+			color: $black;
+		}
+		&.wrong {
+			border-color: $wrong;
+			color: $wrong;
+		}
+	}
+	&__checkbox {
+		@extend %hideCheckbox;
+		&:checked ~ .form__label--checkbox::before {
+			color: $black;
+		}
+	}
+	&__radio {
+		@extend %hideCheckbox;
+		&:checked ~ .form__label--radio::after {
+			background: $black;
+			transform: scale(1);
+		}
+	}
+}

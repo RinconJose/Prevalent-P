@@ -1,0 +1,71 @@
+/* HEADER */
+.#{$brand}{
+    // HEADER
+    &__header {
+        width: 100%;
+        background-color: $gray;
+        height: 70px;
+        @include flex(flex-start);
+    }
+    //LEFT
+    &__left {
+        width: 100%;
+        max-width: 80%;
+        height: 100%;
+        @include mq-min(tab) {
+            max-width: 49%;
+            margin-left: 20px;
+            color: $white;
+            @include flex($ai: center, $jc: flex-start);
+        }
+    }
+    // INPUT
+    &__input {
+        display: none;
+        @include mq-min (tab) {
+            display: block;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            margin-left: 10px;
+            color: $white;
+        }
+    }
+    // LOGO
+    &__logo {
+        display: inline-block;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        line-height: 0;
+        @include flex(flex-start);
+        @include mq-min(tab) {
+            max-width: 49%;
+        }
+        &--img {
+            width: 100%;
+            max-width: 70px;
+            max-height: 70px;
+        }
+    }
+
+    // NAV
+    &__nav {
+        display: none;
+        @include mq-min(tab) {
+            display: block;
+            width: 100%;
+            max-width: 49%;
+            margin-left: auto;
+            &__list {
+                @include flex;
+                &__item {
+                }
+                &__link {
+                    @include flex($d:inline-flex);
+                    background: red;
+                }
+            }
+        }
+    }
+}

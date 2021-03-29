@@ -1,0 +1,64 @@
+/* VARIABLES */
+//Marca
+$brand: "pv";
+
+// MEDIAQUERIES
+$mediaqueries: (
+	hover: "(hover: hover)",
+	ie: "screen and (-ms-high-contrast: active), (-ms-high-contrast: none)",
+	safari: "screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)",
+	safari2: "not all and (min-resolution:.001dpcm)",
+	mobS3: 360,
+	mobS2: 480,
+	mobS: 640,
+	mob: 767,
+	tabS: 820,
+	tab: 991,
+	lapS3: 1024,
+	lapS2: 1199,
+	lapS: 1280,
+	lap: 1367,
+	deskS: 1440,
+	desk: 1560,
+	deskB: 1680
+);
+
+// WIDTH
+$widthLimit: 1200px;
+
+// COLORS
+$black: #000;
+$gray: #292929;
+$white: #FFF;
+$red: #FF0000;
+
+// FORMS
+$wrong: $red;
+
+// LOADER
+$bgLoader: $black;
+$strokeLoader: $white;
+$widthLoader: 100px;
+
+// GLOBAL FONTS
+$robotoRegular: 'robotoRegular';
+$robotoBold: 'robotoBold';
+
+$fontFamily: robotoRegular;
+$baseFont: 16;
+
+// MODAL
+$bgModal: $black;
+$maxWModal: 500px;
+$minHModal: 400px;
+$maxHModal: 550px;
+
+// HAMBURGER BTN
+$acSizeHam: false;
+$sizeHam: 80px;
+$bgHam: transparent;
+$colorBarHam: $black;
+$widthBarHam: 24px;
+$heightBarHam: 2px;
+$radiusBarHam: 2px;
+$spaceBar: $heightBarHam + 3px;
