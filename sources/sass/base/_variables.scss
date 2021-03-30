@@ -28,9 +28,15 @@ $widthLimit: 1200px;
 
 // COLORS
 $black: #000;
+$blcakLight: #424242;
 $gray: #292929;
+$grayText: #9A9A9A;
 $white: #FFF;
+$whiteH: #FFFAFA;
+$fondo: #E5E5E5;
+$blue: #26B4FF;
 $red: #FF0000;
+$separador: #CBCEDD;
 
 // FORMS
 $wrong: $red;
@@ -57,8 +63,8 @@ $maxHModal: 550px;
 $acSizeHam: false;
 $sizeHam: 80px;
 $bgHam: transparent;
-$colorBarHam: $black;
+$colorBarHam: $white;
 $widthBarHam: 24px;
-$heightBarHam: 2px;
+$heightBarHam: 3px;
 $radiusBarHam: 2px;
 $spaceBar: $heightBarHam + 3px;

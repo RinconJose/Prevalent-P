@@ -1,1 +1,98 @@
 /* CARDS */
+.#{$brand} {
+    &__card {
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        @include flex($jc: center);
+        @include mq-min (tab) {
+            width: 80%;
+            justify-content: space-around;
+        }
+        &--title {
+            font-family: $robotoRegular;
+            font-weight: 400;
+            font-size: toRem(24);
+            line-height: 28.13px;
+            color: $blcakLight;
+            @include mq-min(tab) {
+                font-size: toRem(36);
+                line-height: 42px;
+            }
+        }
+        &--container {
+            height: 104px;
+            width: 100%;
+            max-width: 71%;
+            margin: 0 27%;
+            padding: 14px 0;
+            @include mq-min(tab) {
+                height: 260px;
+                margin: 0 5%;
+                padding-top: 15%;
+                @include flex($ai: center, $jc: flex-start);
+            }
+        }
+        &--time {
+            height: 41px;
+            border-top: 1px solid $separador;
+            @include flex(flex-start);
+            margin: 0 20px;
+        }
+        &--logo {
+            width: 19.38px;
+            height: 19.38px;
+        }
+        &--text {
+            font-family: $robotoRegular;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 12px;
+            line-height: 14px;
+            color: $grayText;
+            margin-left: 9px;
+        }
+    }
+    &__container {
+        &--cards {
+        width: 345px;
+        height: 145px;
+        border-radius: 8px;
+        background-color: $white;
+        box-shadow: 0 4px 4px 0 rgba($color: $black, $alpha: 0.25);
+        margin-top: 80px;
+        position: relative;
+        @include mq-min(tab) {
+            width: 100%;
+            max-width: 554px;
+            height: 330px;
+        }
+        }
+        &--img {
+            width: 100%;
+            max-width: 62px;
+            height: 67px;
+            background-color: $blue;
+            border-radius: 8px;
+            box-shadow: 0 4px 4px 0 rgba($color: $black, $alpha: .25);
+            position: absolute;
+            left: 4.64%;
+            top: -10%;
+            @include flex($jc: center, $ai: center);
+            @include mq-min (tab) {
+                max-width: 107.78px;
+                height: 115px;
+            }
+        }
+        &--logo {
+            width: 100%;
+            max-width: 40px;
+            height: 35px;
+            color: $white;
+            @include mq-min (tab) {
+                max-width: 56.23px;
+                height: 52.5px;
+            }
+        }
+    }
+}

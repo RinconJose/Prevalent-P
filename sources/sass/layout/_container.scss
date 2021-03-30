@@ -5,6 +5,10 @@
     &__container {
         width: 100%;
         &--general {
+            background-color: $fondo;
+            @include mq-min (tab) {
+                height: 100vh;
+            }
         }
         &--limit {
             @extend %widthLimit;

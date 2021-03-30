@@ -18,7 +18,7 @@
         @include mq-min(tab) {
             max-width: 45%;
             margin-left: 40px;
-            color: $white;
+            color: $whiteH;
             @include flex($ai: center, $jc: flex-start);
         }
     }
