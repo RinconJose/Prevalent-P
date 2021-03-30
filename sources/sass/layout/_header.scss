@@ -4,8 +4,11 @@
     &__header {
         width: 100%;
         background-color: $gray;
-        height: 70px;
-        @include flex(flex-start);
+        height: 80px;
+        @include flex($jc: center);
+        @include mq-min (tab) {
+            justify-content: flex-start;
+        }
     }
     //LEFT
     &__left {
@@ -13,8 +16,8 @@
         max-width: 80%;
         height: 100%;
         @include mq-min(tab) {
-            max-width: 49%;
-            margin-left: 20px;
+            max-width: 45%;
+            margin-left: 40px;
             color: $white;
             @include flex($ai: center, $jc: flex-start);
         }
@@ -29,6 +32,9 @@
             background-color: transparent;
             margin-left: 10px;
             color: $white;
+            font-family: $robotoRegular;
+            font-weight: 400;
+            font-size: toRem(16);
         }
     }
     // LOGO
@@ -47,25 +53,38 @@
             max-width: 70px;
             max-height: 70px;
         }
+        &--title {
+            color: $white;
+            font-family: $robotoRegular;
+            font-weight: 700;
+            font-size: toRem(16);
+        }
     }
 
     // NAV
     &__nav {
         display: none;
         @include mq-min(tab) {
+            @include flex($jc: flex-end);
             display: block;
             width: 100%;
-            max-width: 49%;
-            margin-left: auto;
-            &__list {
-                @include flex;
-                &__item {
-                }
-                &__link {
-                    @include flex($d:inline-flex);
-                    background: red;
-                }
-            }
+            max-width: 52%;
+        }
+    }
+    &__list {
+        @include flex($jc: space-between, $ai: center);
+        &--item {
+            @include flex($ai: center);
+        }
+        &--link {
+            margin: 0 10px;
+            color: $white;
+            font-family: $robotoRegular;
+            font-weight: 400;
+        }
+        &--bold {
+            @extend .pv__list--link;
+            font-weight: 700;
         }
     }
 }

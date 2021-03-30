@@ -10,8 +10,11 @@
             @extend %widthLimit;
         }
         &--search {
-            max-width: 49%;
-            @include flex(flex-start);
+            display: none;
+            @include mq-min (tab) {
+                max-width: 49%;
+                @include flex(flex-start);
+            }
         }
     }
 }
