@@ -34,14 +34,14 @@
             }
         }
         &--time {
-            height: 41px;
+            height: 70px;
             border-top: 1px solid $separador;
             @include flex(flex-start);
-            margin: 0 20px;
         }
         &--logo {
             width: 19.38px;
             height: 19.38px;
+            margin-left: 20px;
         }
         &--text {
             font-family: $robotoRegular;

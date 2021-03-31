@@ -119,66 +119,103 @@
 		</header>
 		<!-- HEADER -->
 		<!-- MAIN -->
-		<div class="pv__card">
-			<div class="pv__container--cards">
-				<div class="pv__container--img">
-					<img src="./img/industry.svg" alt="" class="pv__container--logo">
-				</div>
-				<div class="pv__card--container">
-					<a href="creacion-de-empresas.html" class="pv__card--title">Solicitudes de creación de empresas</a>
-				</div>
-				<div class="pv__card--time">
-					<img src="./img/reloj.svg" class="pv__card--logo"></img>
-					<p class="pv__card--text">2 solicitudes sin tratar</p>
-				</div>
-			</div>
-			<div class="pv__container--cards">
-				<div class="pv__container--img">
-					<img src="./img/grafica.svg" alt="" class="pv__container--logo">
-				</div>
-				<div class="pv__card--container">
-					<a href="#" class="pv__card--title">Indicadores</a>
-				</div>
-				<div class="pv__card--time">
-					<img src="./img/reloj.svg" class="pv__card--logo"></img>
-					<p class="pv__card--text">Visitado por última vez: 31/01/2020</p>
-				</div>
-			</div>
-			<div class="pv__container--cards">
-				<div class="pv__container--img">
-					<img src="./img/person.svg" alt="" class="pv__container--logo">
-				</div>
-				<div class="pv__card--container">
-					<a href="#" class="pv__card--title">Inscripción de empleados en empresas</a>
-				</div>
-				<div class="pv__card--time">
-					<img src="./img/reloj.svg" class="pv__card--logo"></img>
-					<p class="pv__card--text">3 usuarios sin empresa registrada</p>
-				</div>
-			</div>
-			<div class="pv__container--cards">
-				<div class="pv__container--img">
-					<img src="./img/people.svg" alt="" class="pv__container--logo">
-				</div>
-				<div class="pv__card--container">
-					<a href="#" class="pv__card--title">Gestión de usuarios</a>
-				</div>
-				<div class="pv__card--time">
-					<img src="./img/reloj.svg" class="pv__card--logo"></img>
-					<p class="pv__card--text">532 usuarios activos en la plataforma</p>
-				</div>
-			</div>
-
+		<div class="pv__administracion">
+			<div class="pv__enlaces">
+                <a class="pv__enlaces--administrador" href="#">Administración</a>
+                <p class="pv__enlaces--diagonal">/</p>
+                <a class="pv__enlaces--aprobacion" href="#">Aprobación de Empresas</a>
+            </div>
+            <div class="pv__administracion--container">
+                <div class="pv__slide">
+                    <img src="./img/arrow-l.svg" alt="">
+                    <p class="pv__slide--text">Empresa 1 de 2 pendiente por aprobación</p>
+                    <img src="./img/arrow-r.svg" alt="">
+                </div>
+                <div class="pv__contenido">
+                    <div class="pv__contenido--puntos">
+                        <div class="pv__contenido--logo">
+                            <img class="pv__contenido--img" src="./img/logo-triangulo.png" alt="">
+                        </div>
+                        <div class="pv__contenido--prueba1">
+                            <div class="pv__contenido--aprobar">
+                                <img src="./img/check.svg" alt="">
+                                <p class="pv__contenido--text">Aprobar Empresa</p>
+                            </div>
+                            <div class="pv__contenido--aprobar">
+                                <img src="./img/error.svg" alt="">
+                                <p class="pv__contenido--text">Rechazar Empresa</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FORM -->
+                    <form class="pv__formulario" action="">
+                        <div class="pv__formulario--data">
+                            <label class="pv__formulario--label" for="nombre">Nombre de la empresa</label>
+                            <input class="pv__formulario--input" type="text" value="PREVALENTWARE" name="" id="nombre" >
+                        </div>
+                        <div class="pv__formulario--data">
+                            <label class="pv__formulario--label" for="razonS">Razón Social</label>
+                            <input class="pv__formulario--input" type="text" value="PREVALENTWARE S.A.S" name="" id="razonS" >
+                        </div>
+                        <div class="pv__formulario--data">
+                            <label class="pv__formulario--label" for="nit">Tipo de identificación</label>
+                            <input class="pv__formulario--input" type="text" name="" id="" value="NIT">
+                        </div>
+                        <div class="pv__formulario--data">
+                            <label class="pv__formulario--label" for="id">Identificación</label>
+                            <input class="pv__formulario--input" type="number" name="" id="id" placeholder="901375150-4">
+                        </div>
+                        <div class="pv__formulario--data">
+                            <label class="pv__formulario--label" for="empleados"># de empleados</label>
+                            <input class="pv__formulario--input" type="text" name="" id="empleados" value="1 - 10">
+                        </div>
+                        <div class="pv__formulario--data">
+                            <div class="pv__modal">
+                                <img src="./img/click.svg" alt="">
+                                <a href="#" class="pv__modal--link" id="modal">Ver archivos adjuntos</a>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- END FORM -->
+                    <!-- DOWNLOAD -->
+                    <div class="pv__descargable">
+                        <p class="pv__descargable--text">
+                            Documentos cargados
+                        </p>
+                        <div class="pv__descargable--contenedor">
+                            <div class="pv__descargable--links">
+                                <a class="pv__descargable--pdf" href="">RUT PrevalentWare</a>
+                                <img src="./img/pdf.svg" alt="">
+                            </div>
+                            <div class="pv__descargable--links">
+                                <a class="pv__descargable--pdf" href="">RUT PrevalentWare</a>
+                                <img src="./img/pdf.svg" alt="">
+                            </div>
+                            <div class="pv__descargable--links">
+                                <a class="pv__descargable--pdf" href="">RUT PrevalentWare</a>
+                                <img src="./img/pdf.svg" alt="">
+                            </div>
+                            <div class="pv__descargable--links">
+                                <a class="pv__descargable--pdf" href="">RUT PrevalentWare</a>
+                                <img src="./img/pdf.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END DOWNLOAD -->
+                </div>
+                <div class="pv__contenido--prueba2">
+                    <div class="pv__contenido--aprobar">
+                        <img src="./img/check.svg" alt="">
+                        <p class="pv__contenido--text">Aprobar Empresa</p>
+                    </div>
+                    <div class="pv__contenido--aprobar">
+                        <img src="./img/error.svg" alt="">
+                        <p class="pv__contenido--text">Rechazar Empresa</p>
+                    </div>
+                </div>
+            </div>
 		</div>
 		<!-- END MAIN -->
-
-		<!-- FOOTER -->
-		<footer class="footer">
-			<div class="footer__container">
-
-			</div>
-		</footer>
-		<!-- END FOOTER -->
 	</div>
 	<!-- END GENERAL CONTAINER -->
 

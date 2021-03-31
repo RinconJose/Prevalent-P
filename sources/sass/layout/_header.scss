@@ -16,7 +16,7 @@
         max-width: 80%;
         height: 100%;
         @include mq-min(tab) {
-            max-width: 45%;
+            max-width: 43%;
             margin-left: 40px;
             color: $whiteH;
             @include flex($ai: center, $jc: flex-start);

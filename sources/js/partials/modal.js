@@ -4,6 +4,7 @@ export const modal = () => {
     const modal = doc.queAll('.modal'),
         closeModal = e => {
             let el = e.target;
+            console.log(el);
             if( e.target === e.currentTarget ){
                 if( !el.classList.contains('modal') ){
                     e.preventDefault();
