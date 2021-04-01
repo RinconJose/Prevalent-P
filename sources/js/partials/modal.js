@@ -6,10 +6,11 @@ export const modal = () => {
     var span = document.querySelector("#close");
     var body = document.getElementsByTagName("body");
 
-    btn.onclick = function () {
+    btn.onclick = function (e) {
+        e.preventDefault();
         modal.style.display = "block";
 
-        body.style.position = "static";
+        body.style.position = "absolute";
         body.style.height = "100%";
         body.style.overflow = "hidden";
     }
