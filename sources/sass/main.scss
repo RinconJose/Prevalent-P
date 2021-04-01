@@ -2,7 +2,6 @@
 
 /* BASE */
 @import 'base/variables';
-@import 'base/reset';
 @import 'base/fonts';
 @import 'base/general';
 
@@ -10,30 +9,16 @@
 /* UTILITIES */
 @import 'utilities/functions';
 @import 'utilities/mixins';
-@import 'utilities/animations';
-@import 'utilities/text';
 @import 'utilities/placeholders';
 @import 'utilities/states';
 
-
-/* LIBRARIES */
-// @import 'libraries/animateCSS';
-// @import 'libraries/gridBootstrap';
-
-
 /* COMPONENTS */
-@import 'components/demo';
-@import 'components/loader';
 @import 'components/modal';
-@import 'components/boxes';
-@import 'components/accordion';
 @import 'components/buttons';
-@import 'components/forms';
 @import 'components/cards';
 
 
 /* LAYOUT */
-@import 'layout/layout';
 @import 'layout/container';
 @import 'layout/header';
 @import 'layout/creacion-de-empresas';
