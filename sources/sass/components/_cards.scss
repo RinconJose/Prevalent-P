@@ -10,10 +10,6 @@
         }
         @include mq-min (deskS) {
             width: 80%;
-            margin: 1% auto;
-        }
-        @include mq-min (desk) {
-            margin: 5% auto;
         }
         &--title {
             font-family: $robotoRegular;
