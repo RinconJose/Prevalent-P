@@ -5,7 +5,7 @@
         &--container {
             width: 100%;
             @include flex(flex-start);
-            margin-bottom: 40px;
+            margin-bottom: 35px;
             @include mq-min (tab) {
                 flex-direction: column-reverse;
             }
@@ -163,6 +163,28 @@
             line-height: 18.75px;
         }
     }
+    &__descargable {
+        width: 100%;
+        @include mq-min(tab) {
+            display: none;
+        }
+        &--text {
+            font-size: toRem(18);
+            font-family: $robotoRegular;
+            font-weight: bold;
+            font-style: normal;
+            color: $black;
+        }
+        &--contenedor {
+            width: 85%;
+            margin: 0 auto;
+        }
+        &--links {
+            width: 100%;
+            @include flex($jc: space-between);
+            margin: 15% 0;
+        }
+    }
     &__modal {
         display: none;
         @include mq-min(tab) {
@@ -183,27 +205,68 @@
             color: $black;
             margin-left: 10px;
         }
-    }
-    &__descargable {
-        width: 100%;
-        @include mq-min(lap) {
-            display: none;
+        &--container {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                padding-top: 100px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba($color: $black, $alpha: 0.4);
         }
-        &--text {
-            font-size: toRem(18);
-            font-family: $robotoRegular;
-            font-weight: bold;
-            font-style: normal;
-            color: $black;
+        &--contenido {
+            background-color: $white;
+			margin: auto;
+			padding: 20px;
+			border: 1px solid lightgray;
+            width: 100%;
+			max-width: 60%;
         }
-        &--contenedor {
-            width: 85%;
+        &--close {
+            color: #aaaaaa;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+            &:hover {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            &:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+        &--ventana {
+            @extend .pv__modal--contenido;
+            max-width: 533px;
+            height: 572px;
+        }
+        &--title {
+            @extend %titleBold;
+            text-align: center;
+        }
+        &--bloque {
+            width: 90%;
             margin: 0 auto;
         }
-        &--links {
-            width: 100%;
-            @include flex($jc: space-between);
-            margin: 15% 0;
+        &--text {
+            font-family: $robotoRegular;
+            font-size: toRem(24);
+            line-height: 28px;
+            color: $black;
+            max-width: 60%;
+        }
+        &--download {
+            @extend .pv__descargable--links;
+            margin: 7% auto;
+            margin-left: 0;
+            max-width: 86%;
         }
     }
+
 }

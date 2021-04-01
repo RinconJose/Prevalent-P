@@ -1,38 +1,34 @@
-import {win, doc, log, al, addEv, que, queAll, gId} from "../general/var"
+//import {win, doc, log, al, addEv, que, queAll, gId} from "../general/var"
 
 export const modal = () => {
-    const modal = doc.queAll('.modal'),
-        closeModal = e => {
-            let el = e.target;
-            console.log(el);
-            if( e.target === e.currentTarget ){
-                if( !el.classList.contains('modal') ){
-                    e.preventDefault();
-                }
-                [...doc.queAll('.modal')].map( el => {
-                    el.classList.add('hide');
-                } );
-            }
-        },
-        openModal = e => {
-            let dataEl = e.currentTarget.dataset.modal;
-            if( !e.currentTarget.classList.contains('modal') ){
-                e.preventDefault();
-                doc.que(`.modal[data-modal="${dataEl}"]`).classList.remove('hide');
-            }
-        };
+    var modal = document.getElementById("modalC");
+    var btn = document.getElementById("btnModal");
+    var span = document.querySelector("#close");
+    var body = document.getElementsByTagName("body");
 
-    if( modal.length > 0 ){
-        [...doc.queAll('.modal, .modal__close, .modal__btn--close')].map( el => {
-            el.addEventListener('click', e => {
-                closeModal(e);
-            });
-        } );
+    btn.onclick = function () {
+        modal.style.display = "block";
 
-        [...doc.queAll('[data-modal]:not(.modal)')].map( el => {
-            el.addEventListener('click', e => {
-                openModal(e);
-            });
-        } );
+        body.style.position = "static";
+        body.style.height = "100%";
+        body.style.overflow = "hidden";
+    }
+
+    span.onclick = function () {
+        modal.style.display = "none";
+
+        body.style.position = "inherit";
+        body.style.height = "auto";
+        body.style.overflow = "visible";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+
+            body.style.position = "inherit";
+            body.style.height = "auto";
+            body.style.overflow = "visible";
+        }
     }
 }

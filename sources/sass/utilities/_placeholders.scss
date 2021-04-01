@@ -29,6 +29,14 @@
 
 
 // TEXT
+%titleBold {
+    font-size: toRem(36);
+    font-family: $robotoBold;
+    font-style: normal;
+    line-height: 42px;
+    color: $black;
+}
+
 %sTitle {
     font-size: toRem(24);
     @include mq(mob){

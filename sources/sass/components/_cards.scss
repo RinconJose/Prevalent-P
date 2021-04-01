@@ -5,9 +5,15 @@
         margin: 0 auto;
         padding-bottom: 20px;
         @include flex($jc: center);
-        @include mq-min (tab) {
-            width: 80%;
+        @include mq-min (lapS) {
             justify-content: space-around;
+        }
+        @include mq-min (deskS) {
+            width: 80%;
+            margin: 1% auto;
+        }
+        @include mq-min (desk) {
+            margin: 5% auto;
         }
         &--title {
             font-family: $robotoRegular;
@@ -34,9 +40,12 @@
             }
         }
         &--time {
-            height: 70px;
+            height: 41px;
             border-top: 1px solid $separador;
             @include flex(flex-start);
+            @include mq-min(tab) {
+                height: 70px;
+            }
         }
         &--logo {
             width: 19.38px;
@@ -62,10 +71,15 @@
         box-shadow: 0 4px 4px 0 rgba($color: $black, $alpha: 0.25);
         margin-top: 80px;
         position: relative;
-        @include mq-min(tab) {
+        @include mq-min(lapS) {
+            width: 100%;
+            height: 270px;
+        }
+        @include mq-min(mob) {
             width: 100%;
             max-width: 554px;
             height: 330px;
+            margin-top: 60px;
         }
         }
         &--img {

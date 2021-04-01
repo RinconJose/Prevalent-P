@@ -6,10 +6,8 @@ import { customPropertiesPolyfill } from './partials/customPropertiesPolyfill.js
 import { openLoader } from './partials/loader.js'
 import { menu } from './partials/menu.js'
 import { modal } from './partials/modal.js'
+import { modal2 } from './partials/modal.js'
 import 'regenerator-runtime/runtime'
-
-/* ON LOAD */
-win.onload = () => doc.que('.loader').classList.add('hide')
 
 // /* LOAD COMPLETE */
 doc.addEv('DOMContentLoaded', e => {
@@ -25,7 +23,6 @@ doc.addEv('DOMContentLoaded', e => {
 
 	// MODAL
 	modal()
-
 	// CHOICES ???
 
 	// SET PROPERY
